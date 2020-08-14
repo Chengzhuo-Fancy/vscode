@@ -1,10 +1,14 @@
 shop_car = []
+
+#商品列表
 goods = {
   1:['冰箱',2500],
   2:['洗衣机',3500],
   3:['电风扇',100],
   4:['摩托车',8800]
-}#商品列表
+}
+
+#输入账户余额并选择是否进行购物
 while True:
   salary = input("请输入您的账户余额：\n")
   if salary.isdigit():
@@ -19,6 +23,8 @@ while True:
       exit("欢迎下次光临")
   elif salary.upper() == 'Q':
     exit("欢迎下次光临")
+    
+#对购物中各种过程的处理，有余额可以继续购买，输入错误会提示重新输入，购物结束后进入结算页面
 while True:
     print('\n')
     for i in goods:
@@ -54,6 +60,8 @@ while True:
       break
     else:
       print("请输入正确数字编号")
+      
+#对本次购物情况的小结   
 print("您买了：",end =' ')
 for i in shop_car:
   print(i,end=' ')
